@@ -28,21 +28,22 @@ document.querySelector('.container').addEventListener('click', function (event) 
 );
 
 var palDivContain = document.createElement('div')
-palDivContain.style.width = '500px';
-palDivContain.style.height = '100px';
+palDivContain.style.width = '480px';
+palDivContain.style.height = '160px';
 palDivContain.style.border = '1px solid black';
 palDivContain.style.boxSizing = 'borderBox';
 palDivContain.style.margin = '50px';
 document.body.appendChild(palDivContain);
 
 
-/*for (var j = 0 j < 7; j++) {
-var paletteDiv = document.createElement('div')
-paletteDiv.style.background = 'green';
-paletteDiv.style.width = '10px';
+for (var j = 0; j < 75; j++) {
+var paletteDiv = document.createElement('div');
+paletteDiv.style.background = 'white';
+paletteDiv.style.width = '30px';
 paletteDiv.style.height = '30px';
 paletteDiv.style.border = '1px solid black';
 paletteDiv.style.float = 'right';
 paletteDiv.style.boxSizing = 'borderBox';
+paletteDiv.id = (j);
 palDivContain.appendChild(paletteDiv);
-}*/
+}
