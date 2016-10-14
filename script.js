@@ -21,4 +21,7 @@ for (var i =0; i < 100; i++) {
   canvasDiv.appendChild(innerDiv);
 }
 
-//document.querySelector('.container').addEventListener('click',  )
+document.querySelector('.container').addEventListener('click', function (event) {
+  event.target.style.backgroundColor = 'red';
+}
+);
