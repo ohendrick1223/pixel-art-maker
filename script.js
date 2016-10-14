@@ -21,9 +21,10 @@ for (var i = 0; i < 100; i++) {
   innerDiv.style.boxSizing = 'borderBox';
   canvasDiv.appendChild(innerDiv);
 }
-
+var color = ''
 document.querySelector('.container').addEventListener('click', function (event) {
-  event.target.style.backgroundColor = 'red';
+
+  event.target.style.backgroundColor = color;
 }
 );
 
@@ -55,4 +56,7 @@ document.getElementById('0').style.background = 'green';
 document.getElementById('1').style.background = 'yellow';
 document.getElementById('2').style.background = 'pink';
 
-//document.querySelector(.palBox)
+document.querySelector('.palBox').addEventListener('click', function(event) {
+color = event.target.style.backgroundColor
+}
+)
