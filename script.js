@@ -30,10 +30,10 @@ document.querySelector('.container').addEventListener('click', function (event) 
 var palDivContain = document.createElement('div')
 palDivContain.style.width = '480px';
 palDivContain.style.height = '160px';
-palDivContain.style.border = '1px solid black';
+//palDivContain.style.border = '1px solid black';
 palDivContain.style.boxSizing = 'borderBox';
 palDivContain.style.margin = '50px';
-palDivContain.className = ('palleteBox');
+palDivContain.className = 'palBox';
 document.body.appendChild(palDivContain);
 
 
@@ -44,6 +44,7 @@ paletteDiv.style.background = 'white';
 paletteDiv.style.width = '30px';
 paletteDiv.style.height = '30px';
 paletteDiv.style.border = '1px solid black';
+paletteDiv.style.borderRadius = '100%';
 paletteDiv.style.float = 'right';
 paletteDiv.style.boxSizing = 'borderBox';
 paletteDiv.id = (j);
@@ -53,3 +54,5 @@ palDivContain.appendChild(paletteDiv);
 document.getElementById('0').style.background = 'green';
 document.getElementById('1').style.background = 'yellow';
 document.getElementById('2').style.background = 'pink';
+
+//document.querySelector(.palBox)
