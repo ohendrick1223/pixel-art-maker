@@ -23,17 +23,28 @@ for (var i = 0; i < 1936; i++) {
 }
 var color = ''
 document.querySelector('.container').addEventListener('click', function (event) {
-
-  event.target.style.backgroundColor = color;
+event.target.style.backgroundColor = color;
 }
 );
+
+//BONUS
+//document.querySelector('').addEventListener("mousedown", function(event){});
+//mouseup event occurs when a user releases a mouse button over an element.
+//document.querySelector('').addEventListener("mouseenter", function(event){});
+//mouseenter event occurs when the mouse pointer is moved onto an element.
+//document.querySelector('').addEventListener("mouseup", function(event){});
+//mouseup event occurs when a user releases a mouse button over an element.
+
+
 
 var palDivContain = document.createElement('div')
 palDivContain.style.width = '480px';
 palDivContain.style.height = '160px';
 //palDivContain.style.border = '1px solid black';
 palDivContain.style.boxSizing = 'borderBox';
-palDivContain.style.margin = '50px';
+palDivContain.style.marginBottom = '20px';
+palDivContain.style.marginLeft = '70px';
+palDivContain.style.marginRight = '50px';
 palDivContain.className = 'palBox';
 document.body.appendChild(palDivContain);
 
@@ -153,7 +164,3 @@ currentColor.style.marginLeft = '325px';
 currentColor.style.marginRight = '325px';
 currentColor.style.boxSizing = 'borderBox';
 document.body.appendChild(currentColor);
-
-/*var colorText = document.createElement('h3');
-document.querySelector('p').innerHTML = Current Color
-p.appendChild(currentColor);*/
