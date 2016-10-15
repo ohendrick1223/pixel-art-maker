@@ -149,7 +149,11 @@ currentColor.style.border = '2px solid black';
 currentColor.style.borderRadius = '100%';
 currentColor.style.float = 'right';
 currentColor.Id = 'colorPicker';
-//currentColor.style.marginLeft = 'auto';
-//currentColor.style.marginRiht = 'auto';
+currentColor.style.marginLeft = '325px';
+currentColor.style.marginRight = '325px';
 currentColor.style.boxSizing = 'borderBox';
 document.body.appendChild(currentColor);
+
+/*var colorText = document.createElement('h3');
+document.querySelector('p').innerHTML = Current Color
+p.appendChild(currentColor);*/
