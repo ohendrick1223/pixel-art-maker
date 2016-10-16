@@ -22,19 +22,40 @@ for (var i = 0; i < 1936; i++) {
   canvasDiv.appendChild(innerDiv);
 }
 var color = ''
-document.querySelector('.container').addEventListener('click', function (event) {
-event.target.style.backgroundColor = color;
-}
-);
+var container = document.querySelector('.container')
+var drag = function() {
+  event.target.style.backgroundColor = color;
+};
+var removeDrag = function() {
+  container.removeEventListener('mousedown', drag);
+  container.removeEventListener('mouseover', drag);
+};
+container.addEventListener('mousedown', drag);
+container.addEventListener('mouseover', drag);
+container.addEventListener('mouseup', removeDrag);
 
-//BONUS
-//document.querySelector('').addEventListener("mousedown", function(event){});
-//mouseup event occurs when a user releases a mouse button over an element.
-//document.querySelector('').addEventListener("mouseenter", function(event){});
-//mouseenter event occurs when the mouse pointer is moved onto an element.
-//document.querySelector('').addEventListener("mouseup", function(event){});
-//mouseup event occurs when a user releases a mouse button over an element.
 
+
+
+// container div 'listens' for a mouse up event, and when it occurs, removes the mouse down and mouse over events at once.
+
+
+//   if(painting is on, )
+//   document.querySelector('.container').removeEventListener('mouseover', function(event) {
+//   } );
+// } );
+// var useCapture = false;
+// document.querySelector('.container').addEventListener('mouseup', function(event) {
+//    event.target.stopPropagation();
+//  }, useCapture);
+
+// nstead of removing the Event Listener itself, have mouseup return a boolean value that makes mouseover not paint.
+//
+// [4:15]
+// var painting = true/false
+//
+// [4:16]
+// if(event.target.tagName == “TD” && painting === true){…. paint all the stuff
 
 
 var palDivContain = document.createElement('div')
@@ -158,9 +179,9 @@ currentColor.style.width = '40px';
 currentColor.style.height = '40px';
 currentColor.style.border = '2px solid black';
 currentColor.style.borderRadius = '100%';
-currentColor.style.float = 'right';
-currentColor.Id = 'colorPicker';
-currentColor.style.marginLeft = '325px';
-currentColor.style.marginRight = '325px';
+//currentColor.style.float = 'right';
+currentColor.id = 'colorPicker';
+currentColor.style.marginLeft = '285px';
+//currentColor.style.marginRight = '325px';
 currentColor.style.boxSizing = 'borderBox';
 document.body.appendChild(currentColor);
