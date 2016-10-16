@@ -23,7 +23,7 @@ Here's a development workflow that we recommend you use.
 1. Expand the palette with a brush color indicator.
 1. Improve the look and feel of the canvas and color palette. Be careful not to break your program's behavior!
 
-**TIP:** Check out [this handy tool](http://www.colors.commutercreative.com/grid/) to see a list of all the named colors in CSS.
+**TIP:**0 Check out [this handy tool](http://www.colors.commutercreative.com/grid/) to see a list of all the named colors in CSS.
 
 ### Bonus 1
 
@@ -44,4 +44,4 @@ Review the following articles on the Surge platform and then deploy your website
 
 A good domain name for this project is `USERNAME-pixel-art-maker.surge.sh` where `USERNAME` is your GitHub username in all **lowercase** letters. Once deployed and everything works as you expect, copy the URL to your site and paste it below.
 
-PASTE YOUR PRODUCTION URL HERE
+http://ohendrick1223-pixel-art-maker.surge.sh/
