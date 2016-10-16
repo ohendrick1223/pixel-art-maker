@@ -1,6 +1,5 @@
 'use strict';
 
-
 var canvasDiv = document.createElement('div');
 canvasDiv.style.border = '2px solid black';
 canvasDiv.style.width = '528px';
@@ -8,8 +7,6 @@ canvasDiv.style.height = '528px';
 canvasDiv.style.margin = '50px';
 canvasDiv.className = ('container');
 document.body.appendChild(canvasDiv);
-
-
 
 for (var i = 0; i < 1936; i++) {
   var innerDiv = document.createElement('div');
@@ -21,41 +18,9 @@ for (var i = 0; i < 1936; i++) {
   innerDiv.style.boxSizing = 'borderBox';
   canvasDiv.appendChild(innerDiv);
 }
-var color = ''
-var container = document.querySelector('.container')
-var drag = function() {
-  event.target.style.backgroundColor = color;
-};
-var removeDrag = function() {
-  container.removeEventListener('mousedown', drag);
-  container.removeEventListener('mouseover', drag);
-};
-container.addEventListener('mousedown', drag);
-container.addEventListener('mouseover', drag);
-container.addEventListener('mouseup', removeDrag);
-
-
-
-
-// container div 'listens' for a mouse up event, and when it occurs, removes the mouse down and mouse over events at once.
-
-
-//   if(painting is on, )
-//   document.querySelector('.container').removeEventListener('mouseover', function(event) {
-//   } );
-// } );
-// var useCapture = false;
-// document.querySelector('.container').addEventListener('mouseup', function(event) {
-//    event.target.stopPropagation();
-//  }, useCapture);
-
-// nstead of removing the Event Listener itself, have mouseup return a boolean value that makes mouseover not paint.
-//
-// [4:15]
-// var painting = true/false
-//
-// [4:16]
-// if(event.target.tagName == “TD” && painting === true){…. paint all the stuff
+//delare some globals to referenced in functions at bottom
+var color = '';
+var container = document.querySelector('.container');
 
 
 var palDivContain = document.createElement('div')
@@ -163,16 +128,11 @@ document.getElementById('72').style.background = '#469A84';
 document.getElementById('73').style.background = '#14A989';
 document.getElementById('74').style.background = 'white';
 
-
-
-
-
+//saves the color mouse clicks in palette box to be applied later
 document.querySelector('.palBox').addEventListener('click', function(event) {
 color = event.target.style.backgroundColor;
 currentColor.style.background = color;
-}
-);
-
+} );
 
 var currentColor = document.createElement('div');
 currentColor.style.width = '40px';
@@ -185,3 +145,19 @@ currentColor.style.marginLeft = '285px';
 //currentColor.style.marginRight = '325px';
 currentColor.style.boxSizing = 'borderBox';
 document.body.appendChild(currentColor);
+
+//FUNCTIONALITY!!!!!!
+var click = function(event) {
+  event.target.style.backgroundColor = color;
+  container.addEventListener('mouseover', drag);
+};
+var drag = function(event) {
+  event.target.style.backgroundColor = color;
+};
+
+var removeDrag = function(event) {
+  container.removeEventListener('mouseover', drag);
+};
+
+container.addEventListener('mousedown', click);
+container.addEventListener('mouseup', removeDrag);
